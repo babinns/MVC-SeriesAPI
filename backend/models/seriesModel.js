@@ -7,11 +7,12 @@ const getSeries = async ()=> {
 
 };
 
-const addSeries = async (series)=> {
+const addSeries = async (series,seasons)=> {
 
-    const {title} = series;
+    const {name} = series;
+    const {season} = seasons;
     const query = 'INSERT INTO series(name, seasons) VALUES(?, ?)';
-    const newSeries = await connection.execute(query, [series, 1])
+    const newSeries = await connection.execute(query, [series, seasons]);
 
 };
 

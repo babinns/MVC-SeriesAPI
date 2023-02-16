@@ -5,27 +5,32 @@ import * as seriesModel from "../models/seriesModel.js"
 class SeriesController {
 
     static async getSeries(req, res) {
-        try {
-            
-            const series = await seriesModel.getSeries();
+    
 
+        try{
+            const series = await seriesModel.getSeries();
+            return res.status(200).json(series)
+            
         }catch(error){
-            return res.status(500).json(error.message)
-            }
+            res.status(500).json(error.message)
         }
     
+            
+
+    
+    }
 
     static async addSeries(req, res) {
 
         try{
-            
-            const newSeries = await seriesModel.addSeries(req.body);
+            const newSeries = await seriesModel.addSeries(req.body.name, req.body.seasons);
             return res.status(200).json(req.body)
-        }catch(error){
-            res.status(500).json(error.message)
-        }
 
+        }catch(error){
+        res.status(500).json(error.message)
     }
+}
+
 }
 
 

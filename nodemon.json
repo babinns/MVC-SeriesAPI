@@ -1,0 +1,9 @@
+{
+    "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_USER": "root",
+        "MYSQL_DATABASE": "seriesdb",
+        "MYSQL_PASSWORD": "Mysqlboxx1$",
+        "PORT": 3000
+    }
+}
