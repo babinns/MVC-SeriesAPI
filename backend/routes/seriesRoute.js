@@ -12,7 +12,11 @@ router
 
 .get('/series', SeriesController.getSeries)
 
-.post('/series', SeriesController.addSeries);
+.post('/series', SeriesController.addSeries)
+
+.delete('/series/:id', SeriesController.deleteSeries)
+
+.put('/series/:id', SeriesController.updateSeries)
 
 
 export default router;

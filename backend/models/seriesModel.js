@@ -16,8 +16,21 @@ const addSeries = async (series,seasons)=> {
 
 };
 
+const deleteSeries = async (id)=> {
+    const deletedSeries = await connection.execute('DELETE FROM series WHERE id =?', [id ]);
+    return deletedSeries
+}
+
+const updateSeries = async (id, series)=> {
+    const {name, seasons} = series 
+    const query = 'UPDATE series SET name = ?, seasons = ?  WHERE id =?'
+    const [updatedSeries] = await connection.execute(query, [name, seasons, id]);
+    return updatedSeries
+}
 
 export {
     getSeries,
-    addSeries
+    addSeries,
+    deleteSeries,
+    updateSeries
 }
