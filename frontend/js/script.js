@@ -14,6 +14,8 @@ function close() {
     modal.style.display = 'none';
 }
 
+//NOT WORKING WITH DYNAMICALLY CREATED LIST ITEMS, ONLY STATIC ONES. TRY DEXTER 1 VS DEXTER 2
+
 openInfo.forEach((el)=> {
     el.addEventListener("click", ()=>{
         el.closest(open());

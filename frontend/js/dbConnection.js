@@ -8,6 +8,7 @@ async function listSeries () {
 listSeries()
 
 async function addsSeries(name, seasons, logo) {
+    //UNABLE TO FETCH WITH POST REQUEST 
     const connection = await fetch("http://localhost:3000/series", {
         method: "POST",
         headers: {
