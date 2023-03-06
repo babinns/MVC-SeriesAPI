@@ -1,20 +1,102 @@
-#main-name {
-    text-align: center;
-    vertical-align: center;
-    font-size: 100PX;
-    color: rgb(164, 25, 25);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-}
-
-
-.flex-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    height: 100vh;
+    box-sizing: border-box;
     background-color: black;
+}
+
+.series-grid {
+    margin: 5% 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.image {
+    margin: 5px 10px;
+    transition: 1s;
+    z-index: 10;
+}
+
+.image:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.search-bar{
+    width: 200px;
+    margin-left: 800px;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.add-series {
+    display: block;
+    background-color: rgb(154, 11, 11);
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    margin:20px 60px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;  
+}
+
+.image-grid {
+    margin-left: 50px;
+}
+
+.container ul {
+
+    margin: 5px;    
+
+}
+.container ul li{
+    list-style: none;
+    float: left;
+    margin: 1px 1px 1px 1px;
+
+}
+
+.form-container {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.series-form {
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.field {
+    margin-top:20px;
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+
+}
+
+.sendForm-btn {
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(172, 23, 23) ;
+    font-weight: bold;
+    margin-left:  400px;
 }

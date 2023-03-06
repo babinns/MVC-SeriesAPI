@@ -5,11 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css"/> 
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 <body>
+    <input type="text" placeholder="search..." class="search-bar"> 
 
-    <a href="player.html"><img src="images/dexter.jpg" alt ="series logo" width="130" height="200"></a>
+    <main class="series-grid">
+        <div class="buttons">
+            <a href="form.html" class="add-series">Add series</a>
+        </div>
+        <div class="container">
+            
+            <ul class="logo-grid" data-logos>
 
+                 <li class="series-item"><img src="images/dexter.jpg" alt ="series logo" width="130" height="200" class="image" id="image"></li>
+                <!--<li class="series-item"><img src="images/blackMirror.jpg" alt ="series logo" width="130" height="200" class="image"id="image"></li>
+                <li class="series-item"><img src="images/oitnb.jpg" alt ="series logo" width="130" height="200" class="image"id="image"></li>
+                <li class="series-item"><img src="images/orphanBlack.jpg" alt ="series logo" width="130" height="200" class="image"id="image"></li>
+             
     
+                  <li><img src="images/grey's.jpg" alt ="series logo" width="130" height="200"class="image"i</li>d="image">
+                  <li><img src="images/pll.jpg" alt ="series logo" width="130" height="200"class="image"id="</li>image">
+                  <li><img src="images/houseMd.jpg" alt ="series logo" width="130" height="200"class="image"</li>id="image">
+                  <li><img src="images/vikings.jpg" alt ="series logo" width="130" height="200"class="image"</li>id="image">
+                  <li><img src="images/friends.png" alt ="series logo" width="130" height="200"class="image"</li>id="image">
+                  <li><img src="images/modernFamily.jpg" alt ="series logo" width="130" height="200"class="i</li>mage"id="image">
+                  <li><img src="images/howIMet.jpg" alt ="series logo" width="130" height="200"class="image"</li>id="image">
+                  <li><img src="images/got.jpg" alt ="series logo" width="130" height="200"class="image"id="</li>image">
+                  <li><img src="images/prisonBreak.jpg" alt ="series logo" width="130" height="200"class="im</li>age"id="image">
+                  <li><img src="images/strangerThings.jpg" alt ="series logo" width="130" height="200"class=</li>"image"id="image">
+                  <li><img src="images/bigBang.jpg" alt ="series logo" width="130" height="200"class="image"</li>id="image">
+                  <li><img src="images/breakingBad.jpg" alt ="series logo" width="130" height="200"class="im</li>age"id="image">
+                  <li><img src="images/theBoys.jpg" alt ="series logo" width="130" height="200"class="image"</li>id="image">
+                  <li><img src="images/theOffice.jpeg" alt ="series logo" width="130" height="200"class="ima</li>ge"id="image">
+                  <li><img src="images/utopiaFalls.jpg" alt ="series logo" width="130" height="200"class="im</li>age"id="image">
+             
+              -->  
+           
+            </ul>
+        </div>
+        
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="modal-header">
+                <h2>Series info</h2>
+                <button id="close-button">X</button>
+            </div>
+            <div class="modal-body">    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsam reprehenderit hic facere repellat accusantium dolorem fugit neque quis maiores nihil, eaque nulla minima enim in! Aliquid, nobis. Fugiat, et!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid hic assumenda itaque culpa, maxime dolorem architecto enim rem fuga? Minima voluptas obcaecati dignissimos quis reiciendis sequi qui odit, aspernatur animi!</p>
+            
+                <a id="watch-btn" href="player.html"> <img class ="play-icon" src="images/play_circle_FILL0_wght400_GRAD0_opsz48.png"> Trailer </a>
+            </div>      
+        </div>
+    </main>
+
+    <script src="./js/dbConnection.js" type="module"></script>  
+    <script src="./js/script.js" type="module"></script>  
+    <script src="./js/displayInfo.js" type="module"></script>  
+
 </body>
 </html>

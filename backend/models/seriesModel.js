@@ -7,12 +7,13 @@ const getSeries = async ()=> {
 
 };
 
-const addSeries = async (series,seasons)=> {
+const addSeries = async (series,seasons, logo)=> {
 
     const {name} = series;
     const {season} = seasons;
-    const query = 'INSERT INTO series(name, seasons) VALUES(?, ?)';
-    const newSeries = await connection.execute(query, [series, seasons]);
+    const {images} = logo;
+    const query = 'INSERT INTO series(name, seasons, logo) VALUES(?, ?, ?)';
+    const newSeries = await connection.execute(query, [series, seasons, logo]);
 
 };
 
@@ -22,15 +23,23 @@ const deleteSeries = async (id)=> {
 }
 
 const updateSeries = async (id, series)=> {
-    const {name, seasons} = series 
-    const query = 'UPDATE series SET name = ?, seasons = ?  WHERE id =?'
-    const [updatedSeries] = await connection.execute(query, [name, seasons, id]);
+    const {name, seasons, logo} = series 
+    const query = 'UPDATE series SET name = ?, seasons = ?, logo = ? WHERE id =?'
+    const [updatedSeries] = await connection.execute(query, [name, seasons, logo, id]);
     return updatedSeries
+}
+
+const searchByStatus = async(status) => {
+    
+    const query = 'SELECT * FROM series WHERE ongoing = ?'
+    const [filteredSeries] = await connection.execute(query, [status]);
+    return filteredSeries;
 }
 
 export {
     getSeries,
     addSeries,
     deleteSeries,
-    updateSeries
+    updateSeries,
+    searchByStatus
 }

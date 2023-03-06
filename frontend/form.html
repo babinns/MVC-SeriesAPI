@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Series</title>
+    <link rel="stylesheet" href="./css/index.css"/> 
+</head>
+<body>
+    <div class="form-container">
+
+        <form class="series-form" method="post" data-form>
+            <label for="series-name">Enter Series Name</label>
+            <input data-seriesName class="field" type="text" id="series-name" placeholder="ex: The Simpsons" required><br>
+            <label for="season-count">Enter total Seasons</label>
+            <input data-seasons class="field" type="number" id="season-count" placeholder="ex: 8" required><br>
+            <label for="series-img">Enter path to image</label>
+            <input data-img class="field" type="text" id="series-img" placeholder="ex: http://localhost:port/filename.jpg"><br>
+            <input class="sendForm-btn" type="submit" name="S">
+        </form>
+
+    </div>
+    <script src="./js/addSeries.js" type="module"></script>
+</body>
+</html>

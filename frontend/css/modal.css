@@ -1,0 +1,98 @@
+a {
+    text-decoration: none;
+}
+
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #FFF;
+}
+
+.close-button {
+    padding: .6rem 1.2rem;
+    background-color: rgb(159, 17, 17) ;
+    color: #FFF;
+    border: none;
+    border-radius: .25rem;
+    cursor:pointer;
+    opacity: .9;
+    font-size: 1rem;
+}
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    transition: 1.2s;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #080808;
+    color: #FFF;
+    z-index: 1;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    transition: 1.2s;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;   
+}
+
+.modal-header button, a {
+    padding: .2rem .4rem;
+    margin-bottom: 20px;
+    background-color: rgb(159, 17, 17) ;
+    color: #FFF;
+    border: none;
+    border-radius: .25rem;
+    cursor:pointer;
+    opacity: .9;
+    font-size: 1rem;
+
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#watch-btn {
+    width: 20%;
+    padding: .2rem .2rem;
+    margin-top: 20px;
+    background-color: rgb(159, 17, 17) ;
+    color: #FFF;
+    border: none;
+    border-radius: .25rem;
+    cursor:pointer;
+    opacity: .9;
+    font-size: 1rem;
+    margin-left: 400px;
+    justify-content: space-between;
+}
+
+.play-icon {
+
+    width: 20%;
+    color: #FFF;
+}
